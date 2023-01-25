@@ -125,6 +125,8 @@ def run_as_console(license, test_input, data_path):
         print(f"\t                  City: {right_fielder_object.md_right_fielder_obj.GetCity()}")
         print(f"\t                 State: {right_fielder_object.md_right_fielder_obj.GetState()}")
         print(f"\t                   Zip: {right_fielder_object.md_right_fielder_obj.GetPostalCode()}")
+        print(f"\t          Result Codes: {data_container.result_codes}")
+
         # right_fielder_object.md_right_fielder_obj.GetFullNameNext()
         # print(f"\t              FullName: {right_fielder_object.md_right_fielder_obj.GetFullName()}")
         # right_fielder_object.md_right_fielder_obj.GetDepartmentNext()
