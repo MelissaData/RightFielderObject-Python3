@@ -1,5 +1,5 @@
-# Name:    MelissaDataRightFielderObjectWindowsPython3Sample
-# Purpose: Use the Melissa Updater to make the MelissaDataRightFielderObjectWindowsPython3 sample usable
+# Name:    MelissaRightFielderObjectWindowsPython3
+# Purpose: Use the Melissa Updater to make the MelissaRightFielderObjectWindowsPython3 code usable
 
 
 ######################### Parameters ##########################
@@ -26,7 +26,7 @@ $ProductName = "RF_DATA"
 # Modify this if you want to use 
 $CurrentPath = $PSScriptRoot
 Set-Location $CurrentPath
-$ProjectPath = "$CurrentPath\MelissaDataRightFielderObjectWindowsPython3Sample"
+$ProjectPath = "$CurrentPath\MelissaRightFielderObjectWindowsPython3"
 $DataPath = "$ProjectPath\Data"
 
 If (!(Test-Path $DataPath)) {
@@ -111,7 +111,7 @@ function CheckDLLs() {
 
 ########################## Main ############################
 
-Write-Host "`n================= Sample of Melissa Data Right Fielder Object =================`n                    [ Python3 | Windows | 64BIT ]`n"
+Write-Host "`n======================== Melissa Right Fielder Object =========================`n                    [ Python3 | Windows | 64BIT ]`n"
 
 # Get license (either from parameters or user input)
 if ([string]::IsNullOrEmpty($license) ) {
@@ -147,14 +147,11 @@ if (!$DLLsAreDownloaded) {
 
 Write-Host "All file(s) have been downloaded/updated! "
 
-# Start sample
-# Build project
-Write-Host "`n================================= BUILD PROJECT ==============================="
-
+# Start
 # Run project
 if ([string]::IsNullOrEmpty($rfinput)) {
-  python3 MelissaDataRightFielderObjectWindowsPython3Sample/MelissaDataRightFielderObjectWindowsPython3Sample.py --license $License  --dataPath $DataPath
+  python3 MelissaRightFielderObjectWindowsPython3/MelissaRightFielderObjectWindowsPython3.py --license $License  --dataPath $DataPath
 }
 else {
-  python3 MelissaDataRightFielderObjectWindowsPython3Sample/MelissaDataRightFielderObjectWindowsPython3Sample.py --license $License  --dataPath $DataPath --rfinput $rfinput
+  python3 MelissaRightFielderObjectWindowsPython3/MelissaRightFielderObjectWindowsPython3.py --license $License  --dataPath $DataPath --rfinput $rfinput
 }
