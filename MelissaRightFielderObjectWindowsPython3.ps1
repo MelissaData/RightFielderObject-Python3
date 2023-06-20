@@ -150,8 +150,12 @@ Write-Host "All file(s) have been downloaded/updated! "
 # Start
 # Run project
 if ([string]::IsNullOrEmpty($rfinput)) {
-  python3 MelissaRightFielderObjectWindowsPython3/MelissaRightFielderObjectWindowsPython3.py --license $License  --dataPath $DataPath
+  Push-Location MelissaRightFielderObjectWindowsPython3
+  python3 MelissaRightFielderObjectWindowsPython3.py --license $License  --dataPath $DataPath
+  Pop-Location
 }
 else {
-  python3 MelissaRightFielderObjectWindowsPython3/MelissaRightFielderObjectWindowsPython3.py --license $License  --dataPath $DataPath --rfinput $rfinput
+  Push-Location MelissaRightFielderObjectWindowsPython3
+  python3 MelissaRightFielderObjectWindowsPython3.py --license $License  --dataPath $DataPath --rfinput $rfinput
+  Pop-Location
 }
