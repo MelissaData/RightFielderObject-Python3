@@ -2,5 +2,6 @@ __pycache__/
 Data/
 mdRightFielder.dll
 mdRightFielder.dll.hash
+*.hash
 MelissaUpdater
 # mdRightFielder_pythoncode.py
