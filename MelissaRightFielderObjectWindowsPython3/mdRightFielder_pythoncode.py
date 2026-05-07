@@ -143,10 +143,10 @@ class mdRightFielder(object):
 		lib.mdRightFielderDestroy(self.I)
 
 	def SetLicenseString(self, p1):
-		return lib.mdRightFielderSetLicenseString(self.I, p1.encode('utf-8'))
+		return lib.mdRightFielderSetLicenseString(self.I, (p1 or '').encode('utf-8'))
 
 	def SetPathToRightFielderFiles(self, p1):
-		lib.mdRightFielderSetPathToRightFielderFiles(self.I, p1.encode('utf-8'))
+		lib.mdRightFielderSetPathToRightFielderFiles(self.I, (p1 or '').encode('utf-8'))
 
 	def GetBuildNumber(self):
 		return lib.mdRightFielderGetBuildNumber(self.I).decode('utf-8')
@@ -194,16 +194,16 @@ class mdRightFielder(object):
 		lib.mdRightFielderSetAcceptURL(self.I, p1)
 
 	def SetUserPattern(self, p1, p2):
-		return lib.mdRightFielderSetUserPattern(self.I, p1.encode('utf-8'), p2.encode('utf-8'))
+		return lib.mdRightFielderSetUserPattern(self.I, (p1 or '').encode('utf-8'), (p2 or '').encode('utf-8'))
 
 	def Parse(self, p1):
-		return lib.mdRightFielderParse(self.I, p1.encode('utf-8'))
+		return lib.mdRightFielderParse(self.I, (p1 or '').encode('utf-8'))
 
 	def ParseFreeForm(self, p1):
-		return lib.mdRightFielderParseFreeForm(self.I, p1.encode('utf-8'))
+		return lib.mdRightFielderParseFreeForm(self.I, (p1 or '').encode('utf-8'))
 
 	def ParseFielded(self, p1):
-		return lib.mdRightFielderParseFielded(self.I, p1.encode('utf-8'))
+		return lib.mdRightFielderParseFielded(self.I, (p1 or '').encode('utf-8'))
 
 	def GetFullName(self):
 		return lib.mdRightFielderGetFullName(self.I).decode('utf-8')
@@ -272,10 +272,10 @@ class mdRightFielder(object):
 		return lib.mdRightFielderGetURLNext(self.I)
 
 	def GetUserField(self, p1):
-		return lib.mdRightFielderGetUserField(self.I, p1.encode('utf-8')).decode('utf-8')
+		return lib.mdRightFielderGetUserField(self.I, (p1 or '').encode('utf-8')).decode('utf-8')
 
 	def GetUserFieldNext(self, p1):
-		return lib.mdRightFielderGetUserFieldNext(self.I, p1.encode('utf-8'))
+		return lib.mdRightFielderGetUserFieldNext(self.I, (p1 or '').encode('utf-8'))
 
 	def GetUnrecognized(self):
 		return lib.mdRightFielderGetUnrecognized(self.I).decode('utf-8')
@@ -287,10 +287,10 @@ class mdRightFielder(object):
 		return lib.mdRightFielderGetResults(self.I).decode('utf-8')
 
 	def GetResultCodeDescription(self, resultCode, opt=0):
-		return lib.mdRightFielderGetResultCodeDescription(self.I, resultCode.encode('utf-8'), ResultCdDescOpt(opt).value).decode('utf-8')
+		return lib.mdRightFielderGetResultCodeDescription(self.I, (resultCode or '').encode('utf-8'), ResultCdDescOpt(opt).value).decode('utf-8')
 
 	def SetReserved(self, p1, p2):
-		lib.mdRightFielderSetReserved(self.I, p1.encode('utf-8'), p2.encode('utf-8'))
+		lib.mdRightFielderSetReserved(self.I, (p1 or '').encode('utf-8'), (p2 or '').encode('utf-8'))
 
 	def GetReserved(self, p1):
-		return lib.mdRightFielderGetReserved(self.I, p1.encode('utf-8')).decode('utf-8')
+		return lib.mdRightFielderGetReserved(self.I, (p1 or '').encode('utf-8')).decode('utf-8')
